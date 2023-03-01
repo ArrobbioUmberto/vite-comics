@@ -30,14 +30,14 @@ export default {
 header li {
     color: black;
     list-style-type: none;
-    padding: 2px 10px;
-    margin: 2px 5px;
+    padding: 50px 10px;
     text-transform: uppercase;
-
+    box-sizing: border-box;
+    border-bottom: 5px solid transparent;
 }
 
 header li:hover {
-    border-bottom: 2px solid blue;
+    border-bottom-color: blue;
 }
 
 .container {
@@ -50,5 +50,7 @@ header li:hover {
 
 header ul {
     display: flex;
+    padding-inline-start: 0;
+    margin-block: 0;
 }
 </style>

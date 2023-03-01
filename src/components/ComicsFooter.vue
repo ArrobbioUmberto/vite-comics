@@ -96,6 +96,7 @@ footer li {
 footer .shop li:first-child {
     text-transform: uppercase;
     font-weight: bold;
+    padding: 15px 0;
 }
 
 footer .row {
