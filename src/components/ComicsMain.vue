@@ -66,8 +66,8 @@ main li {
 }
 
 main img {
-    width: 50px;
-    margin: 0 5px;
+    width: 70px;
+    padding: 0 10px;
 }
 
 #locator-img {
@@ -75,6 +75,6 @@ main img {
 }
 
 main .blue-stripe {
-    padding: 50px 0;
+    padding: 40px 0;
 }
 </style>

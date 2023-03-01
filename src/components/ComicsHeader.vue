@@ -22,7 +22,6 @@ export default {
                 <li>shop</li>
             </ul>
         </div>
-
     </header>
 </template>
 
