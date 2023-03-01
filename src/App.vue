@@ -1,10 +1,12 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
 import ComicsHeader from './components/ComicsHeader.vue';
+import ComicsMain from './components/ComicsMain.vue';
 </script>
 
 <template>
   <ComicsHeader></ComicsHeader>
+  <ComicsMain></ComicsMain>
 </template>
 
 <style scoped>
