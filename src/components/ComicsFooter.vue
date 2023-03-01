@@ -129,6 +129,7 @@ footer button {
 
 .container.social {
     justify-content: space-between;
+    padding: 15px 0;
 }
 
 .social {
