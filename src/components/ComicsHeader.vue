@@ -26,5 +26,23 @@ export default {
 <style>
 li {
     list-style-type: none;
+    padding: 2px 10px;
+    margin: 2px 5px;
+    text-transform: uppercase;
+
+}
+
+li:hover {
+    border-bottom: 2px solid blue;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    display: flex;
 }
 </style>
