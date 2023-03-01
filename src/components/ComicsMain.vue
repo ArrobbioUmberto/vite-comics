@@ -10,7 +10,7 @@ export default {
                 <h1>--> Content goes here &lt;--</h1>
             </div>
         </section>
-        <section>
+        <section class="blue-stripe">
             <div class="container">
                 <div>
                     <ul>
@@ -72,5 +72,9 @@ main img {
 
 #locator-img {
     width: 40px;
+}
+
+main .blue-stripe {
+    padding: 50px 0;
 }
 </style>
