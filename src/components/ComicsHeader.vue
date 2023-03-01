@@ -5,26 +5,30 @@ export default {
 </script>
 <template>
     <header>
-        <div>
-            <img src="/img/dc-logo.png" alt="">
+        <div class="container">
+            <div>
+                <img src="/img/dc-logo.png" alt="">
+            </div>
+            <ul>
+                <li>characters</li>
+                <li>comics</li>
+                <li>movies</li>
+                <li>tv</li>
+                <li>games</li>
+                <li>collectibles</li>
+                <li>videos</li>
+                <li>fans</li>
+                <li>news</li>
+                <li>shop</li>
+            </ul>
         </div>
-        <ul>
-            <li>characters</li>
-            <li>comics</li>
-            <li>movies</li>
-            <li>tv</li>
-            <li>games</li>
-            <li>collectibles</li>
-            <li>videos</li>
-            <li>fans</li>
-            <li>news</li>
-            <li>shop</li>
-        </ul>
+
     </header>
 </template>
 
 <style>
-li {
+header li {
+    color: black;
     list-style-type: none;
     padding: 2px 10px;
     margin: 2px 5px;
@@ -32,17 +36,19 @@ li {
 
 }
 
-li:hover {
+header li:hover {
     border-bottom: 2px solid blue;
 }
 
-header {
+.container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
-ul {
+header ul {
     display: flex;
 }
 </style>
