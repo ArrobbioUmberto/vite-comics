@@ -163,6 +163,7 @@ footer .shop img {
     position: absolute;
     right: 0%;
     top: -20%;
+    width: 500px;
 }
 
 footer button {
