@@ -1,6 +1,21 @@
 <script>
 export default {
-
+    data() {
+        return {
+            HeaderMenuList: [
+                { text: 'characters', link: '#' },
+                { text: 'comics', link: '#' },
+                { text: 'movies', link: '#' },
+                { text: 'tv', link: '#' },
+                { text: 'games', link: '#' },
+                { text: 'collectibles', link: '#' },
+                { text: 'videos', link: '#' },
+                { text: 'fans', link: '#' },
+                { text: 'news', link: '#' },
+                { text: 'shop', link: '#' },
+            ]
+        }
+    }
 }
 </script>
 <template>
@@ -10,16 +25,9 @@ export default {
                 <img src="/img/dc-logo.png" alt="">
             </div>
             <ul>
-                <li>characters</li>
-                <li>comics</li>
-                <li>movies</li>
-                <li>tv</li>
-                <li>games</li>
-                <li>collectibles</li>
-                <li>videos</li>
-                <li>fans</li>
-                <li>news</li>
-                <li>shop</li>
+                <li v-for="el in HeaderMenuList">
+                    <a href="#">{{ el.text }}</a>
+                </li>
             </ul>
         </div>
     </header>
@@ -33,6 +41,10 @@ header li {
     text-transform: uppercase;
     box-sizing: border-box;
     border-bottom: 5px solid transparent;
+}
+
+a {
+    color: black;
 }
 
 header li:hover {

@@ -55,7 +55,7 @@ export default {
             return this.listMenufooter.filter(el => {
                 return el.menu === 'sites'
             })
-        }
+        },
     }
 }
 </script>
@@ -106,11 +106,11 @@ export default {
                 <div class="col follow">
                     <h2>FOLLOW US</h2>
                     <ul class="logo">
-                        <li><img src="/img/footer-facebook.png" alt=""></li>
-                        <li><img src="/img/footer-twitter.png" alt=""></li>
-                        <li><img src="/img/footer-youtube.png" alt=""></li>
-                        <li><img src="/img/footer-pinterest.png" alt=""></li>
-                        <li><img src="/img/footer-periscope.png" alt=""></li>
+                        <li><a href="#"><img src="/img/footer-facebook.png" alt=""></a></li>
+                        <li><a href="#"><img src="/img/footer-twitter.png" alt=""></a></li>
+                        <li><a href="#"><img src="/img/footer-youtube.png" alt=""></a></li>
+                        <li><a href="#"><img src="/img/footer-pinterest.png" alt=""></a></li>
+                        <li><a href="#"><img src="/img/footer-periscope.png" alt=""></a></li>
                     </ul>
                 </div>
             </div>
@@ -119,7 +119,9 @@ export default {
     </footer>
 </template>
 
-<style>
+<style lang="scss" scoped>
+@use '../style/partials/variables' as *;
+
 footer {
     background-image: url('/img/footer-bg.jpg');
 }
@@ -130,6 +132,10 @@ footer li {
     list-style-type: none;
     text-align: start;
     font-weight: 300;
+
+    a {
+        color: white;
+    }
 }
 
 footer .shop li:first-child {
@@ -163,7 +169,7 @@ footer button {
     color: white;
     border: 1px solid cornflowerblue;
     border-radius: 0;
-    background-color: #303030;
+    background-color: $dark-grey ;
 }
 
 .container.social {
@@ -172,7 +178,7 @@ footer button {
 }
 
 .social {
-    background-color: #303030;
+    background-color: $dark-grey;
 }
 
 .follow {
