@@ -1,6 +1,62 @@
 <script>
 export default {
+    data() {
+        return {
+            listMenufooter: [
+                { menu: 'dc comics', text: 'characters', link: '#', },
+                { menu: 'dc comics', text: 'comics', link: '#', },
+                { menu: 'dc comics', text: 'movies', link: '#', },
+                { menu: 'dc comics', text: 'tv', link: '#', },
+                { menu: 'dc comics', text: 'games', link: '#', },
+                { menu: 'dc comics', text: 'videos', link: '#', },
+                { menu: 'dc comics', text: 'news', link: '#', },
+                { menu: 'shop', text: 'shop dc', link: '#', },
+                { menu: 'shop', text: 'shop dc collectibles', link: '#', },
+                { menu: 'dc', text: 'terms of use', link: '#', },
+                { menu: 'dc', text: 'privacy policiy (new)', link: '#', },
+                { menu: 'dc', text: 'ad choice', link: '#', },
+                { menu: 'dc', text: 'advertising', link: '#', },
+                { menu: 'dc', text: 'jobs', link: '#', },
+                { menu: 'dc', text: 'subscriptions', link: '#', },
+                { menu: 'dc', text: 'talent workshops', link: '#', },
+                { menu: 'dc', text: 'CPSC certificates', link: '#', },
+                { menu: 'dc', text: 'ratings', link: '#', },
+                { menu: 'dc', text: 'shop help', link: '#', },
+                { menu: 'dc', text: 'contact us', link: '#', },
+                { menu: 'sites', text: 'dc', link: '#', },
+                { menu: 'sites', text: 'mad magazine', link: '#', },
+                { menu: 'sites', text: 'dc kids', link: '#', },
+                { menu: 'sites', text: 'dc universe', link: '#', },
+                { menu: 'sites', text: 'dc power visa', link: '#', },
+            ]
+        }
+    },
+    methods: {
 
+    },
+    // uso il computed perche ho dati reattivi
+    computed: {
+        DcComicsMenu() {
+            return this.listMenufooter.filter(el => {
+                return el.menu === 'dc comics'
+            })
+        },
+        ShopMenu() {
+            return this.listMenufooter.filter(el => {
+                return el.menu === 'shop'
+            })
+        },
+        DcMenu() {
+            return this.listMenufooter.filter(el => {
+                return el.menu === 'dc'
+            })
+        },
+        SitesMenu() {
+            return this.listMenufooter.filter(el => {
+                return el.menu === 'sites'
+            })
+        }
+    }
 }
 </script>
 <template>
@@ -10,45 +66,28 @@ export default {
                 <div class="row">
                     <div class="col">
                         <ul>
-                            <li>dc comics</li>
-                            <li>Characters</li>
-                            <li>Comics</li>
-                            <li>Movies</li>
-                            <li>Tv</li>
-                            <li>Games</li>
-                            <li>Videos</li>
-                            <li>News</li>
+                            <li v-for="el in DcComicsMenu">
+                                <a :href="el.link">{{ el.text }}</a>
+                            </li>
                         </ul>
                         <ul>
-                            <li>shop</li>
-                            <li>Shop DC</li>
-                            <li>Shop DC Collectibles</li>
+                            <li v-for="el in ShopMenu">
+                                <a :href="el.link">{{ el.text }}</a>
+                            </li>
                         </ul>
                     </div>
                     <div class="col">
                         <ul>
-                            <li>dc</li>
-                            <li>Term of Use</li>
-                            <li>Privacy policy(New)</li>
-                            <li>Ad Choices</li>
-                            <li>Advertising</li>
-                            <li>Jobs</li>
-                            <li>Subscriptions</li>
-                            <li>Talent Workshops</li>
-                            <li>CPSC Certficates </li>
-                            <li>Ratings</li>
-                            <li>Shop Help</li>
-                            <li>Contact Us</li>
+                            <li v-for="el in DcMenu">
+                                <a :href="el.link">{{ el.text }}</a>
+                            </li>
                         </ul>
                     </div>
                     <div class="col">
                         <ul>
-                            <li>sites</li>
-                            <li>DC</li>
-                            <li>MAD Magazine</li>
-                            <li>DC Kids</li>
-                            <li>DC Universe</li>
-                            <li>DC Power Visa</li>
+                            <li v-for="el in SitesMenu">
+                                <a :href="el.link">{{ el.text }}</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
