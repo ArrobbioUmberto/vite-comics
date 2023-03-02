@@ -59,6 +59,10 @@ li:hover {
     margin: 0 auto;
 }
 
+img {
+    user-select: none;
+}
+
 ul {
     display: flex;
     padding-inline-start: 0;
