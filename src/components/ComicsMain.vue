@@ -148,7 +148,10 @@ h1 {
 ul {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+
 }
 
 li {
@@ -167,6 +170,10 @@ li:nth-child(4) img {
 
 li:first-child img {
     width: 50px;
+}
+
+li:last-child {
+    padding: 12px 0;
 }
 
 img {
