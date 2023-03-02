@@ -52,9 +52,9 @@ export default {
                     type: "comic book"
                 },
                 {
-                    thumb: "./img/copertina7.jpg",
+                    thumb: "./img/copertina4.jpg",
                     price: "$3.99",
-                    series: "Batman/Superman",
+                    series: "Batman / Superman",
                     type: "comic book"
                 },
                 {
