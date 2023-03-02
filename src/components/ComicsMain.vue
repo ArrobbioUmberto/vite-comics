@@ -37,38 +37,39 @@ export default {
     </main>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use '../style/partials/variables.scss' as *;
 
 main {
     background-color: $dc-blue;
 }
 
-.content .container {
+.container {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     max-width: 1280px;
+    margin: 0 auto;
 }
 
 .content {
     background-color: black;
 }
 
-main h1 {
+h1 {
     color: white;
     padding: 40px;
     font-size: 25px;
 }
 
-main ul {
+ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-main li {
+li {
     color: white;
     display: flex;
     align-items: center;
@@ -78,18 +79,18 @@ main li {
     font-family: 'Times New Roman', Times, serif;
 }
 
-main li:nth-child(4) img {
+li:nth-child(4) img {
     width: 50px;
 }
 
-main img {
+img {
     width: 70px;
     height: 70px;
     padding: 0 10px;
 }
 
 
-main .blue-stripe {
+.blue-stripe {
     padding: 40px 0;
 }
 </style>
