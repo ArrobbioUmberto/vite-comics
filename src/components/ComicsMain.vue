@@ -1,6 +1,19 @@
 <script>
 export default {
+    data() {
+        return {
+            ServiceList: [
+                { icon: '/img/buy-comics-digital-comics.png', text: 'digital comics' },
+                { icon: '/img/buy-comics-merchandise.png', text: 'dc merchandise' },
+                { icon: '/img/buy-comics-subscriptions.png', text: 'subscription' },
+                { icon: '/img/buy-comics-shop-locator.png', text: 'comic shop locator' },
+                { icon: '/img/buy-dc-power-visa.svg', text: 'dc power visa' }
+            ]
+        }
+    },
+    methods: {
 
+    }
 }
 </script>
 <template>
@@ -14,11 +27,9 @@ export default {
             <div class="container">
                 <div>
                     <ul>
-                        <li><img src="/img/buy-comics-digital-comics.png" alt=""> digital comics</li>
-                        <li><img src="/img/buy-comics-merchandise.png" alt=""> dc merchandise</li>
-                        <li><img src="/img/buy-comics-subscriptions.png" alt=""> subscription</li>
-                        <li><img src="/img/buy-comics-shop-locator.png" alt="" id="locator-img"> comic shop locator</li>
-                        <li><img src="/img/buy-dc-power-visa.svg" alt=""> dc power visa</li>
+                        <li v-for="service in ServiceList">
+                            <img src="service.icon" alt="">{{ service.text }}
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -26,9 +37,11 @@ export default {
     </main>
 </template>
 
-<style>
+<style lang="scss">
+@use '../style/partials/variables.scss' as *;
+
 main {
-    background-color: #0282f9;
+    background-color: $dc-blue;
 }
 
 .content .container {
@@ -67,6 +80,7 @@ main li {
 
 main img {
     width: 70px;
+    height: 70px;
     padding: 0 10px;
 }
 
