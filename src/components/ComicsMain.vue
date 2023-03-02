@@ -28,7 +28,7 @@ export default {
                 <div>
                     <ul>
                         <li v-for="service in ServiceList">
-                            <img src="service.icon" alt="">{{ service.text }}
+                            <img :src="service.icon" alt="">{{ service.text }}
                         </li>
                     </ul>
                 </div>
@@ -78,15 +78,16 @@ main li {
     font-family: 'Times New Roman', Times, serif;
 }
 
+main li:nth-child(4) img {
+    width: 50px;
+}
+
 main img {
     width: 70px;
     height: 70px;
     padding: 0 10px;
 }
 
-#locator-img {
-    width: 40px;
-}
 
 main .blue-stripe {
     padding: 40px 0;
