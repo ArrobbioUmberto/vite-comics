@@ -97,12 +97,18 @@ export default {
 </script>
 <template>
     <main>
+        <section class="jumbotron">
+            <div class="container height">
+                <p>current series</p>
+            </div>
+        </section>
         <section class="content">
             <div class="container">
                 <ul>
                     <ComicsCard v-for="(el, i) in Comics" :key="i" :thumb="el.thumb" :series="el.series">
                     </ComicsCard>
                 </ul>
+                <button> load more</button>
             </div>
         </section>
         <section class="blue-stripe">
@@ -126,6 +132,38 @@ main {
     background-color: $dc-blue;
 }
 
+.jumbotron {
+    background-image: url('/img/jumbotron.jpg');
+    height: 43vh;
+}
+
+.height {
+    height: 100%;
+    position: relative;
+}
+
+p {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    padding: 12px 30px;
+    text-transform: uppercase;
+    background-color: $dc-blue;
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    user-select: none;
+}
+
+button {
+    background-color: $dc-blue;
+    border-radius: 0;
+    color: white;
+    margin-bottom: 20px;
+    padding: 10px 50px;
+    text-transform: uppercase;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -137,12 +175,14 @@ main {
 
 .content {
     background-color: black;
+    padding: 30px 0;
 }
 
 h1 {
     color: white;
     padding: 40px;
     font-size: 25px;
+    user-select: none;
 }
 
 ul {
@@ -162,6 +202,7 @@ li {
     text-transform: uppercase;
     margin: 0 10px;
     font-family: 'Times New Roman', Times, serif;
+    user-select: none;
 }
 
 li:nth-child(4) img {
