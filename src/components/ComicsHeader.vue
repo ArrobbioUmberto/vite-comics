@@ -33,8 +33,8 @@ export default {
     </header>
 </template>
 
-<style>
-header li {
+<style lang="scss" scoped>
+li {
     color: black;
     list-style-type: none;
     padding: 50px 10px;
@@ -47,7 +47,7 @@ a {
     color: black;
 }
 
-header li:hover {
+li:hover {
     border-bottom-color: blue;
 }
 
@@ -59,7 +59,7 @@ header li:hover {
     margin: 0 auto;
 }
 
-header ul {
+ul {
     display: flex;
     padding-inline-start: 0;
     margin-block: 0;
