@@ -14,11 +14,24 @@ export default {
 </template>
 <style lang="scss" scoped>
 h3 {
-    font-size: 10px;
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+    flex-basis: calc((100% / 7) - 10px);
+    align-items: center;
+    justify-content: center;
+}
+
+li:last-child {
+    padding: 0;
 }
 
 img {
-    width: 50px;
-    height: 50px;
+    width: 100%;
+    aspect-ratio: 3/4;
 }
 </style>
